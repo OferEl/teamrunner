@@ -22,6 +22,10 @@ SECRET_KEY = 'w71f+m5=%7-57@*k3yznpr)$ocylpt)iq2dt^mz&$jmods+8f8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'template'),
+)
+
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -36,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'teamrunner',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -79,5 +84,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
