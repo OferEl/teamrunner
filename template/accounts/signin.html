@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+	<!-- Fixed navbar -->
+	{{ user.is_authenticated }}
+	<!-- container -->
+	<div class="container">
+
+		<ol class="breadcrumb">
+			<li><a href="{% url 'index' %}">Home</a></li>
+			<li class="active">User access</li>
+		</ol>
+		{% if user.is_authenticated %}
+        <p> Welcome111, {{ user.username }}
+         </p>
+        {% else %}
+         <p>Welcome, Guest <a href="{% url 'index' %}">[login]</a></p>
+        {% endif %}
+
+		<div class="row">
+			
+			<!-- Article main content -->
+			<article class="col-xs-12 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Sign in</h1>
+				</header>
+				
+				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h3 class="thin text-center">Sign in to your account</h3>
+							<p class="text-center text-muted">Lorem ipsum dolor sit amet, <a href="{% url 'signup' %}">Register</a> adipisicing elit. Quo nulla quibusdam cum doloremque incidunt nemo sunt a tenetur omnis odio. </p>
+							<hr>
+							
+							<form action="{% url 'signin' %}"  method="post">{% csrf_token %}
+							    {% if next %}
+                                 <input type="hidden" name="next" value="{{ next }}" />
+                                {% endif %}
+						
+								<div class="top-margin">
+									<label>Username/Email <span class="text-danger">*</span></label>
+									<input type="text" id="username" name="username" class="form-control">
+								</div>
+								<div class="top-margin">
+									<label>Password <span class="text-danger">*</span></label>
+									<input type="password" id="password" name="password" class="form-control">
+									{% if login_failed %}
+                                    <p class="text-danger">Sorry, that login was invalid.  Please try again.</p>
+                                    {% endif %}
+								</div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-lg-8">
+										<b><a href="">Forgot password?</a></b>
+									</div>
+									<div class="col-lg-4 text-right">
+										<button class="btn btn-action" type="submit">Sign in</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+				
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+</body>
+{% endblock %}
+
+<footer>
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+</footer>

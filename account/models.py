@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class user(models.Model):
@@ -15,3 +16,12 @@ class user(models.Model):
     
     def __unicode__(self):
         return self.name
+
+
+class UserProfile(models.Model):
+    # This field is required.
+    user = models.OneToOneField(User)
+    # Other fields here
+    city   = models.CharField(max_length=50)
+    age    = models.IntegerField(max_length=2)
+    gender = models.IntegerField(max_length=1)

@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'teamrunner',
+    'account',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -52,6 +52,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
+
+AUTH_PROFILE_MODULE = 'teamrunner.UserProfile'
 
 ROOT_URLCONF = 'teamrunner.urls'
 
