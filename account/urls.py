@@ -26,7 +26,7 @@ urlpatterns = patterns('',
 #        name='usersettings',
 #    ),
     url(
-        regex=r'^signin/$',
+        regex='',
         view=signin,
         name='signin',
     ),
