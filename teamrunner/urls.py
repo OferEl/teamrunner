@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from teamrunner.views import main_page , LoginView,signupView,coachView,groupsView,partnersView
+from teamrunner.views import main_page,signupView,groupsView,partnersView
 #from teamrunner import account
 urlpatterns = patterns('',
     # Examples:
@@ -15,7 +15,9 @@ urlpatterns = patterns('',
     #url(r'^author-polls/', include('polls.urls', namespace='author-polls', app_name='account')),
     
     url(r"^signup/$", signupView.as_view() , name='signup'  ),
-    url(r"^coach/$", coachView.as_view() , name='coach'  ),
+   # url(r"^coach/$", coachView.as_view() , name='coach'  ),
+    url(r"^coach/", include('coach.urls' ),name='coach' ),
+    
     url(r"^groups/$", groupsView.as_view() , name='groups'  ),
     url(r"^partners/$", partnersView.as_view() , name='partners'),
 )

@@ -1,6 +1,6 @@
 /* Header */
-#head { background:#181015 url( ../images/main.jpg) no-repeat; background-size: cover; min-height:520px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
-#head.secondary { height:100px; min-height: 100px; padding-top:0px; }
+#head { background:#c0c0c0; background-size: cover; min-height:10px; text-align: center; padding-top:30px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
+#head.secondary { height:50px; min-height: 100px; padding-top:0px; }
 	#head .lead { font-family:"Open sans", Helvetica, Arial; font-size:44px; margin-bottom:6px; color:white; line-height:1.15em; } 
 	#head .tagline { color:rgba(255,255,255,0.75); margin-bottom:25px; }
 		#head .tagline a { color:#fff; } 
@@ -42,7 +42,7 @@ label { color: #777; }
 ul.list-spaces li{ margin-bottom:10px; }
 
 /* Helpers */
-.container-full { margin: 0 auto; width: 100%; }
+.container-full { margin: 100 auto; width: 100%; }
 .top-space { margin-top: 60px; }
 .top-margin { margin-top:20px; }
 
@@ -65,7 +65,7 @@ img.pull-left { margin-right: 10px; }
 .footer1 { background: #232323; padding: 30px 0 0 0; font-size: 12px; color: #999; }
 	.footer1 a { color: #ccc; }
 		.footer1 a:hover {color: #fff; }
-	.footer1 .widget { margin-bottom:30px; }		
+	.footer1 .widget { margin-bottom:5px; }		
 	.footer1 .widget-title { font-size: 17px; font-weight: bold; color: #ccc; margin: 0 0 20px; }
 	.footer1 .entry-meta { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; margin: 0 0 35px 0; padding: 2px 0; color: #888888; font-size: 12px; font-size: 0.75rem; }
 		.footer1 .entry-meta a { color: #333333; }

@@ -1,42 +1,82 @@
 {% extends "base.html" %}
 
+{% block header %}
+	{% include "nav.html" %}
+{% endblock %}
+
+
+
+
 {% block content %}
-<body class="home">
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="{% url 'index' %}"><img src="{{ STATIC_URL }}assets/images/run_logo.jpg" alt="Progressus HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn" href="{% url 'signin' %}"> SIGN IN / SIGN UP </a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
+
+<div class="jumbotron">
+  <div class="page-header">
+    <h1 class="lead">START, GO, RUN</h1>
+    <p> TEAM RUNNER : free social running together </p>
+     
+      <form class="form-inline">
+              <div class="form-group">
+                   <label for="level">Level</label>
+                   <input type="text" class="form-control" id="leve" placeholder="starts">
+              </div>
+              <div class="form-group">
+                   <label for="area">Area</label>
+                   <input type="email" class="form-control" id="area" placeholder="Tal-Aviv">
+              </div>
+              <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+  </div>
+</div>
 
 
-    <header id="head">
-		<div class="container">
-			<div class="row">
-				<h1 class="lead">START, GO, RUN</h1>
-				<p class="tagline">TEAM RUNNER : free social running together </p>
-				<p><a class="btn btn-default btn-lg" role="button">TEAMS</a> 
-				<a class="btn btn-default btn-lg" role="button">PARTNERS</a>
-				<a class="btn btn-default btn-lg" role="button">COACHS</a>
-				<a class="btn btn-action btn-lg" role="button">SEARCHE</a>
-				   </p>
-			</div>
-		</div>
-	</header>
-	<!-- /Header -->
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-sm-4 highlight">
+    <div class="thumbnail">
+      <img src="{{ STATIC_URL }}assets/pic/group_1.jpg" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p>
+        <a href="#" class="btn btn-primary" role="button">Button</a> 
+        <a href="#" class="btn btn-default" role="button">Button</a>
+        </p>
+      </div>
+    </div>
+        <div class="thumbnail">
+      <img src="{{ STATIC_URL }}assets/pic/group_1.jpg" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+    
+        <div class="thumbnail">
+      <img src="{{ STATIC_URL }}assets/pic/group_1.jpg" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+    
+        <div class="thumbnail">
+      <img src="{{ STATIC_URL }}assets/pic/group_1.jpg" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-	
-</body>
+
+
+
+
+
 {% endblock  %}
 
 

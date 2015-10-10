@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body class="home">
+
+	<!-- Header -->
+	<header id="head">
+		<div class="container">
+			<div class="row">
+				<h1 class="lead">START, GO, RUN</h1>
+				<p class="tagline">TEAM RUNNER : free social running together </p>
+				<p><a class="btn btn-default btn-lg" role="button">TEAMS</a> 
+				<a class="btn btn-default btn-lg" role="button">PARTNERS</a>
+				<a class="btn btn-default btn-lg" role="button">COACHS</a>
+				<a class="btn btn-action btn-lg" role="button">SEARCHE</a>
+				   </p>
+			</div>
+		</div>
+	</header>
+	<!-- /Header -->
+
+	<!-- Intro -->
+	<div class="container text-center">
+		<br> <br>
+		<h2 class="thin">The best place to tell people why they are here</h2>
+		<p class="text-muted">
+			The difference between involvement and commitment is like an eggs-and-ham breakfast:<br> 
+			the chicken was involved; the pig was committed.
+		</p>
+	</div>
+	<!-- /Intro-->
+		
+	<!-- Highlights - jumbotron -->
+	<div class="jumbotron top-space">
+		<div class="container">
+			<h3 class="text-center thin">Reasons to use this template</h3>
+			
+			<div class="row">
+				<div class="col-md-3 col-sm-6 highlight">
+					<div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>PARTNERS</h4></div>
+					<a class="navbar-brand" href="{% url 'partners' %}"><img src="{{ STATIC_URL }}assets/images/run2.jpg" alt="run in group"></a>					
+				</div>
+				<div class="col-md-3 col-sm-6 highlight">
+					<div class="h-caption"><h4><i class="fa fa-flash fa-5"></i>TEAMS</h4></div>
+					  <a class="navbar-brand" href="{% url 'groups' %}"><img src="{{ STATIC_URL }}assets/images/group.jpg" alt="run in group"></a>					
+				</div>
+				<div class="col-md-3 col-sm-6 highlight">
+					<div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>COACHS</h4></div>
+					<a class="navbar-brand" href="{% url 'coach' %}"><img src="{{ STATIC_URL }}assets/images/coach.jpg" alt="run in group"></a>			
+				</div>
+				<div class="col-md-3 col-sm-6 highlight">
+					<div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>Author's support</h4></div>
+					<div class="h-body text-center">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, excepturi, maiores, dolorem quasi reprehenderit illo accusamus nulla minima repudiandae quas ducimus reiciendis odio sequi atque temporibus facere corporis eos expedita? </p>
+					</div>
+				</div>
+			</div> <!-- /row  -->
+		
+		</div>
+	</div>
+	<!-- /Highlights -->
+
+	<!-- container -->
+<div class="container">
+
+		<h2 class="text-center top-space">questions</h2>
+		<br>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<h3>?is it must to registry</h3>
+				<p>I'd highly recommend you <a href="http://www.sublimetext.com/">Sublime Text</a> - a free to try text editor which I'm using daily. Awesome tool!</p>
+			</div>
+			<div class="col-sm-6">
+				<h3>Nice header. Where do I find more images like that one?</h3>
+				<p>
+					Well, there are thousands of stock art galleries, but personally, 
+					I prefer to use photos from these sites: <a href="http://unsplash.com">Unsplash.com</a> 
+					and <a href="http://www.flickr.com/creativecommons/by-2.0/tags/">Flickr - Creative Commons</a></p>
+			</div>
+		</div> <!-- /row -->
+
+</div>	<!-- /container -->
+</body>
+{% endblock %}
+
+<footer>
+  {% block footer %}
+  {% include "footer.html" %}
+  {% endblock %}
+</footer>
+
+<!--ofer check if need     JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="{{ STATIC_URL }}assets/js/headroom.min.js"></script>
+<script src="{{ STATIC_URL }}assets/js/jQuery.headroom.min.js"></script>
+<script src="{{ STATIC_URL }}assets/js/template.js"></script>
+
+
+

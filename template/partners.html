@@ -1,42 +1,73 @@
 {% extends "base.html" %}
 
-{% block content %}
-<body class="home">
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="{% url 'index' %}"><img src="{{ STATIC_URL }}assets/images/run_logo.jpg" alt="Progressus HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn" href="{% url 'signin' %}"> SIGN IN / SIGN UP </a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
-
-
-    <header id="head">
+{% block header %}
+ {% include "nav.html" %}
+	 <header id="head">
 		<div class="container">
 			<div class="row">
 				<h1 class="lead">START, GO, RUN</h1>
 				<p class="tagline">TEAM RUNNER : free social running together </p>
-				<p><a class="btn btn-default btn-lg" role="button">TEAMS</a> 
-				<a class="btn btn-default btn-lg" role="button">PARTNERS</a>
-				<a class="btn btn-default btn-lg" role="button">COACHS</a>
+				<p><a class="btn btn-default btn-lg" role="button">LEVEL</a> 
+				<a class="btn btn-default btn-lg" role="button">AREA</a>
+				<a class="btn btn-default btn-lg" role="button">SIZE</a>
 				<a class="btn btn-action btn-lg" role="button">SEARCHE</a>
 				   </p>
 			</div>
 		</div>
 	</header>
-	<!-- /Header -->
+{% endblock  %}
 
-	
-</body>
+{% block content %}
+<div class="container">
+  
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>partner dan</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>partner yoav</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>partner roni</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>partner gal</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>partner gal</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>partner gal</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>partner gal</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>partner gal</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
 {% endblock  %}
 
 

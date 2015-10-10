@@ -1,11 +1,6 @@
-from django.views.generic import TemplateView
-#from django.shortcuts import render
+from coach.models import coach
+from django.shortcuts import render,render_to_response
+from django.core.context_processors import csrf
 
-class main_page(TemplateView):
-    template_name = "main.html"
-    
-#    def get_context_data(self, kwargs):
-#        context = super(main_page, self).get_context_data(self,kwargs)
-#        return context
-
-    #return render (request,"main.html")
+def coachview (Request):
+    return render(Request,"coach.html",{'entries': coach.objects.values()})

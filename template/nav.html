@@ -1,16 +1,26 @@
 <html>
-<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="{% url 'index' %}"><img src="{{ STATIC_URL }}assets/images/run_logo.jpg" alt="Progressus HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn" href="{% url 'signin' %}"> SIGN IN / SIGN UP </a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-</div> 
+
+ 
+ 
+ <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'signin' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="{% url 'signin' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+     </ul>
+     
+     <ul class="nav navbar-nav navbar-left">
+        <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-user"></span>Team Runner</a></li>
+        
+     </ul>
+					
+  </div>
+</nav>
+
+
+
+
+
+
 </html>
